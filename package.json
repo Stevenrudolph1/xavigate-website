@@ -1,8 +1,0 @@
-{
-  "name": "xavigate-website",
-  "version": "1.0.0",
-  "description": "Xavigate static website",
-  "scripts": {
-    "start": "echo 'Static site - no build needed'"
-  }
-}

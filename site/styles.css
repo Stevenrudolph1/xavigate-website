@@ -937,6 +937,31 @@ body {
     background-color: var(--surface-page);
 }
 
+/* Library organization table (How It Works page) */
+.library-org-table thead .col-area {
+    width: 140px;
+}
+
+.library-org-table thead .col-book {
+    width: 180px;
+}
+
+.library-org-table tbody tr.row-renergence td:first-child {
+    border-left: 3px solid var(--thread-renergence);
+}
+
+.library-org-table tbody tr.row-hnr td:first-child {
+    border-left: 3px solid var(--thread-hnr);
+}
+
+.library-org-table tbody tr.row-mn td:first-child {
+    border-left: 3px solid var(--thread-mn);
+}
+
+.library-org-table tbody tr.row-engagement td:first-child {
+    border-left: 3px solid var(--thread-engagement);
+}
+
 /* ============================================
    Thread Detail Sections (Books page)
    ============================================ */
