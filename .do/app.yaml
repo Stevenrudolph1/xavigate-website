@@ -1,0 +1,7 @@
+name: xavigate-website
+static_sites:
+  - name: xavigate-site
+    source_dir: site
+    output_dir: /
+    routes:
+      - path: /
