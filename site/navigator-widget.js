@@ -4,7 +4,7 @@
   var API_URL = (window.XAVIGATE_CONFIG && window.XAVIGATE_CONFIG.apiUrl) || '/api/navigate';
   var MAX_EXCHANGES = 5;
   var OPENING_MESSAGE =
-    'This is a library of books and tools \u2014 not a course. There\u2019s no right order, and you don\u2019t need to read everything. It\u2019s designed to be coherent as a whole, and usable in parts.\n\nTell me what\u2019s going on and I\u2019ll point you to where it starts.';
+    'This is a collection of books and tools \u2014 not a course. There\u2019s no right order, and you don\u2019t need to read everything. It\u2019s designed to be coherent as a whole, and usable in parts.\n\nTell me what\u2019s going on and I\u2019ll point you to where it starts.';
   var FALLBACK_MESSAGE =
     'I\u2019m having trouble connecting right now. You can email support@xavigate.com and we\u2019ll help you find the right starting point.';
 
