@@ -527,6 +527,24 @@ body {
     flex: 1;
 }
 
+/* Recognition area tag — small pill above the hook */
+.recognition-area-tag {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.95);
+}
+.recognition-renergence .recognition-area-tag { background-color: var(--thread-renergence); }
+.recognition-hnr .recognition-area-tag { background-color: var(--thread-hnr); }
+.recognition-mn .recognition-area-tag { background-color: var(--thread-mn); }
+.recognition-engagement .recognition-area-tag { background-color: var(--thread-engagement); }
+
 /* Recognition hook — the scannable lead question */
 .recognition-hook {
     font-size: var(--text-xl);
