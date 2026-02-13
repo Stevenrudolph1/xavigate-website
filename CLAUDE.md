@@ -102,10 +102,11 @@ Use these variables in CSS, not hard-coded hex values.
 
 **Gateway books:** 4 (one per area - all free)
 **Depth books:**
-- Renergence: 3 books on depletion patterns
-- Structure (HNR): 4 books on structural patterns
+- Renergence: 0 published (3 planned — see ~/Projects/books/FUTURE_BOOKS_REFERENCE.md)
+- Structure (HNR): 0 published (4 planned — see ~/Projects/books/FUTURE_BOOKS_REFERENCE.md)
 - Alignment (MN): 5 books by topic & profession
 - Positioning (Engagement Map): 2 books on practice & witnessing
+**Total available:** 11 (4 free + 7 depth)
 
 ---
 
@@ -154,88 +155,11 @@ Use these variables in CSS, not hard-coded hex values.
 
 ---
 
-## Move Catalog Terminology
+## Product Terminology
 
-**CRITICAL: "Move Catalog" NOT "Move Library"**
+**Governed by:** `planning/governance/terminology/TERM-001-products-not-catalog.md`
 
-### Canonical Term
-
-**Move Catalog** (always capitalized when referring to the product)
-
-**Deprecated/Prohibited:**
-- ✗ Move Library
-- ✗ Move Set
-- ✗ Move Repository
-- ✗ Move Toolkit
-- ✗ Move Framework
-- ✗ Move Playbook
-
-### What It Is
-
-**Formal definition:**
-The Move Catalog is the complete, indexed collection of structural moves prescribed by the HNR framework, organized by pattern and move family, accessed exclusively through diagnostic routing—never by browsing.
-
-**One-sentence description (for copy, UI, inline reference):**
-A complete, indexed collection of structural moves selected by diagnosis, not exploration.
-
-**Current scope:**
-- 57 structural interventions (current count)
-- Organized across 4 pattern books (BT, BTNY, INTC, HDTBMJ)
-- 16 move families
-- Accessed via Heroic Load Audit diagnostic routing
-
-### Product Structure
-
-**Thread-specific catalogs:**
-- Structure Move Catalog: $497 (one-time)
-- Alignment Move Catalog: $497 (one-time)
-- Positioning Move Catalog: $497 (one-time)
-- Renergence Move Catalog: $497 (one-time)
-
-**Complete catalog:**
-- Complete Move Catalog (or "Full Move Catalog"): $1,497 (one-time)
-- Includes all areas, all books, all tools, all assessments
-
-### Permitted Access Language
-
-**Always use diagnostic-first framing:**
-- ✓ "The Audit routes you to your Move Catalog section"
-- ✓ "Access the Move Catalog through diagnostic results"
-- ✓ "Your diagnostic output maps to Move Catalog section [X]"
-- ✓ "Locate your move in the Move Catalog"
-- ✓ "The Move Catalog entry for [move name] specifies..."
-- ✓ "Select the prescribed move from the Move Catalog"
-
-**Prohibited - never imply browsing or exploration:**
-- ✗ "Browse the Move Catalog"
-- ✗ "Explore the Move Catalog"
-- ✗ "Choose from the Move Catalog"
-- ✗ "Try moves from the Move Catalog"
-- ✗ "The Move Catalog offers options"
-- ✗ "Discover interventions"
-
-### Where It Appears
-
-**Website pages:**
-- pricing.html - practitioner licensing tiers
-- training.html - tools & access overview
-- practitioners.html - professional licensing context
-- books/structure.html - "Apply it" practitioner section
-- how-it-works.html - workflow and operational sequence
-
-**Definition boxes required on:**
-- pricing.html (explain Move Catalog vs individual books)
-- books/structure.html (explain diagnostic-first access)
-- Any page where first introduced
-
-**Design system files:**
-- move-catalog-list.svg (icon)
-- cover-move-catalog.html (book cover template)
-
-### Key Distinction
-
-**Move Catalog ≠ Individual Books**
-
-Individual books are purchased/read independently. The Move Catalog is the complete practitioner reference system that includes all books, tools, and diagnostic instruments organized for professional use.
-
-Readers buy books. Practitioners license the Move Catalog.
+**Top-level nav:** "Products" (not Books, not Move Catalog, not Resources)
+**Main products page:** `products.html` (renamed from books.html)
+**Permitted sub-terms:** Books, Courses, Tools, Training, Diagnostic Tools
+**Prohibited terms on public surfaces:** Move Catalog, Move Library, Move System, Resources, Solutions, Offerings
