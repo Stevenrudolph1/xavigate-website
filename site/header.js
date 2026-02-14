@@ -6,11 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Detect if we're in a subdirectory (like /books/)
     const pathPrefix = pathname.includes('/books/') ? '../' : '';
 
+    // Skip link (accessibility: first focusable element)
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.className = 'skip-link';
+    skipLink.textContent = 'Skip to main content';
+    document.body.insertAdjacentElement('afterbegin', skipLink);
+
     const headerHTML = `
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo"><a href="${pathPrefix}index.html">Xavigate</a></div>
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -27,23 +34,41 @@ document.addEventListener('DOMContentLoaded', function() {
         </nav>
     `;
 
-    // Insert header at the beginning of body
-    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+    // Insert header after skip link
+    skipLink.insertAdjacentHTML('afterend', headerHTML);
+
+    // Add id="main-content" to first <main> or first content section
+    var main = document.querySelector('main') || document.querySelector('.hero') || document.querySelector('.page-header') || document.querySelector('section');
+    if (main && !document.getElementById('main-content')) {
+        main.id = 'main-content';
+    }
 
     // Mobile menu toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+
     navToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
+        var isExpanded = navLinks.classList.toggle('active');
         navToggle.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', String(isExpanded));
     });
 
     // Close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            navToggle.classList.remove('active');
-        });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
+            navToggle.focus();
+        }
     });
 });
