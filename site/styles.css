@@ -2865,4 +2865,257 @@ body {
     color: var(--thread-engagement);
 }
 
+/* ============================================
+   Book Landing Pages
+   ============================================ */
+.book-landing {
+    padding: var(--section-padding-y-lg) 0;
+}
 
+.book-landing-hero {
+    display: flex;
+    gap: var(--space-site-xl);
+    align-items: flex-start;
+    max-width: var(--content-wide);
+    margin-bottom: var(--space-site-xl);
+}
+
+.book-landing-cover {
+    flex-shrink: 0;
+    width: var(--cover-width);
+    position: sticky;
+    top: 100px;
+}
+
+.book-landing-intro {
+    flex: 1;
+}
+
+.book-landing-intro h1 {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-site-xs);
+    line-height: var(--line-tight);
+}
+
+.book-landing-subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-site-sm);
+    font-style: italic;
+}
+
+.book-landing-author {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    margin-bottom: var(--space-site-md);
+}
+
+.book-landing-hook {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    font-weight: var(--weight-semibold);
+    line-height: var(--line-snug);
+    margin-bottom: var(--space-site-md);
+    padding-left: var(--space-site-md);
+    border-left: 4px solid var(--site-accent);
+}
+
+.book-landing-desc {
+    font-size: var(--text-md);
+    color: var(--text-primary);
+    line-height: var(--line-relaxed);
+    margin-bottom: var(--space-site-md);
+}
+
+.book-landing-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-site-md);
+    margin-bottom: var(--space-site-md);
+    flex-wrap: wrap;
+}
+
+.book-landing-price {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+}
+
+.book-landing-price.free {
+    color: var(--accent-renergence);
+}
+
+.book-landing-formats {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+}
+
+.book-landing-cta {
+    display: flex;
+    gap: var(--space-site-sm);
+    flex-wrap: wrap;
+}
+
+/* Chapter list */
+.book-chapters {
+    max-width: var(--content-wide);
+    margin-bottom: var(--space-site-xl);
+}
+
+.book-chapters h2 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-site-md);
+}
+
+.chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: chapter;
+}
+
+.chapter-list li {
+    counter-increment: chapter;
+    padding: var(--space-site-sm) var(--space-site-md);
+    border-bottom: var(--border-thin) solid var(--surface-card-border);
+    font-size: var(--text-md);
+    color: var(--text-primary);
+    line-height: var(--line-normal);
+}
+
+.chapter-list li::before {
+    content: counter(chapter);
+    display: inline-block;
+    width: 28px;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+}
+
+.chapter-list li:last-child {
+    border-bottom: none;
+}
+
+/* Who this is for */
+.book-who-for {
+    max-width: var(--content-wide);
+    margin-bottom: var(--space-site-xl);
+}
+
+.book-who-for h2 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-site-md);
+}
+
+.who-for-list {
+    list-style: none;
+    padding: 0;
+}
+
+.who-for-list li {
+    padding: var(--space-site-xs) 0;
+    padding-left: var(--space-site-md);
+    position: relative;
+    font-size: var(--text-md);
+    color: var(--text-primary);
+    line-height: var(--line-normal);
+}
+
+.who-for-list li::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: var(--site-accent);
+    font-weight: var(--weight-bold);
+}
+
+/* What shifts */
+.book-what-shifts {
+    max-width: var(--content-wide);
+    margin-bottom: var(--space-site-xl);
+    padding: var(--space-site-lg);
+    background-color: var(--surface-page);
+    border-radius: var(--site-radius);
+}
+
+.book-what-shifts h2 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-site-md);
+}
+
+.book-what-shifts p {
+    font-size: var(--text-md);
+    color: var(--text-primary);
+    line-height: var(--line-relaxed);
+    margin-bottom: var(--space-site-sm);
+}
+
+.book-what-shifts p:last-child {
+    margin-bottom: 0;
+}
+
+/* Area-specific hook colors */
+.book-renergence .book-landing-hook { border-left-color: var(--thread-renergence); }
+.book-hnr .book-landing-hook { border-left-color: var(--thread-hnr); }
+.book-mn .book-landing-hook { border-left-color: var(--thread-mn); }
+.book-engagement .book-landing-hook { border-left-color: var(--thread-engagement); }
+
+/* Next steps section */
+.book-next {
+    max-width: var(--content-wide);
+    padding: var(--space-site-lg);
+    background-color: var(--surface-card);
+    border-radius: var(--site-radius);
+    border: var(--border-thin) solid var(--surface-card-border);
+}
+
+.book-next h2 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-site-md);
+}
+
+.book-next-links {
+    display: flex;
+    gap: var(--space-site-md);
+    flex-wrap: wrap;
+}
+
+.book-next-link {
+    display: inline-block;
+    padding: var(--space-site-sm) var(--space-site-md);
+    background-color: var(--surface-page);
+    border-radius: var(--site-radius-sm);
+    color: var(--site-accent);
+    text-decoration: none;
+    font-weight: var(--weight-medium);
+    font-size: var(--text-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.book-next-link:hover {
+    background-color: var(--surface-card-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .book-landing-hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-landing-cover {
+        position: static;
+        margin-bottom: var(--space-site-md);
+    }
+    .book-landing-intro {
+        text-align: left;
+    }
+}
