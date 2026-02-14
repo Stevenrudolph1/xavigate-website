@@ -421,9 +421,16 @@ body {
    Hero Section
    ============================================ */
 .hero {
+    position: relative;
+    overflow: hidden;
     padding: var(--space-site-xl) 0;
     text-align: center;
     background-color: var(--thread-renergence);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -456,12 +463,19 @@ body {
     font-weight: var(--weight-medium);
 }
 
-.hero-mark {
-    margin-bottom: var(--space-site-sm);
+.hero-bg-mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    pointer-events: none;
 }
 
-.hero-mark svg {
-    opacity: 0.5;
+.hero-bg-mark svg {
+    width: 100%;
+    height: 100%;
 }
 
 /* ============================================
