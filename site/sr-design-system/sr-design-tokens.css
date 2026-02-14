@@ -322,4 +322,85 @@
   --heading-h3-below: 0.5rem;
   --heading-h4-above: 1.5rem;
   --heading-h4-below: 0.4rem;
+
+  /* ============================================
+     CAROUSEL TYPOGRAPHY (1080×1080 social images)
+     ============================================
+     Context: LinkedIn carousel slides rendered on
+     mobile (~375px viewport). A 1080px image scales
+     to ~375px = 2.88× reduction. Text must be legible
+     after that scaling.
+
+     RULE: One font family only — var(--font-body).
+     No serif/sans mixing. Hierarchy via weight + size.
+
+     Minimum rendered size after 2.88× scaling:
+       48px → ~17px rendered (minimum for body)
+       56px → ~19px rendered (comfortable body)
+       64px → ~22px rendered (emphasis)
+       72px → ~25px rendered (titles)
+
+     Font: IBM Plex Sans (web) / Avenir Next (local fallback)
+     ============================================ */
+  --carousel-font: var(--font-body);
+
+  /* Size scale (px at 1080×1080 canvas)
+     CONSISTENCY RULE: All content slides (body, reframe, closing)
+     use IDENTICAL weight + size. Only the title slide differs.
+     There is no separate "emphasis" or "body" — just "content". */
+  --carousel-title-size: 72px;
+  --carousel-content-size: 52px;    /* ALL content slides — body, reframe, closing */
+  --carousel-caption-size: 28px;
+  --carousel-page-num-size: 20px;
+
+  /* Weights */
+  --carousel-title-weight: 700;
+  --carousel-content-weight: 700;   /* Bold for all content slides */
+  --carousel-caption-weight: 400;
+
+  /* Line heights */
+  --carousel-title-line: 1.25;
+  --carousel-content-line: 1.5;     /* ALL content slides */
+
+  /* Paragraph gap (empty line between paragraphs) */
+  --carousel-para-gap: 0.5;
+
+  /* Colors (inherit from site text tokens) */
+  --carousel-text: var(--text-primary);
+  --carousel-text-body: var(--text-body);
+  --carousel-text-muted: var(--text-secondary);
+  --carousel-text-quiet: var(--text-quiet);
+
+  /* Margins (px at 1080×1080 canvas) */
+  --carousel-margin-h: 100px;
+  --carousel-margin-v: 120px;
+
+  /* Accent bar width */
+  --carousel-accent-bar: 8px;
+  --carousel-accent-line: 4px;
+
+  /* ── Alignment Rule ──
+     HARD CONSTRAINT: All carousel text is LEFT-ALIGNED.
+     Center alignment is ONLY permitted for:
+       - Single words or short phrases (no period at end)
+       - Page numbers, attribution lines
+     If text ends with a period → left-aligned. Always.
+     Prose, sentences, paragraphs → NEVER centered.
+     ────────────────────────────────────────────── */
+  --carousel-text-align: left;
+
+  /* ── Slide Layout Consistency ──
+     ALL content slides (body, reframe, closing) share
+     IDENTICAL visual structure:
+       - Left accent bar (thread-colored, full height minus margins)
+       - Same text x-position (after bar + gap)
+       - Same font weight + size (--carousel-content-*)
+     Only the title slide has a different layout.
+     No per-slide-type decorative variation.
+
+     Closing slide attribution:
+       - Text only: "xavigate.com"
+       - No brand name prefix, no SVG mark/image
+       - Centered (short phrase, no period)
+     ────────────────────────────────────────────── */
 }

@@ -127,7 +127,7 @@ Use these variables in CSS, not hard-coded hex values.
 - "epistemic"
 - "load-bearing"
 - "imprint"
-- "Gateway" (use "Free" for reader-facing badges)
+- "Gateway" — NEVER use publicly. Use "Free" for badges, "free books" in prose. Internal architecture term only.
 - "Depth" (remove badge, use status tags instead)
 - "Instruments" (use "Practitioner" for reader-facing badges)
 
