@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; ${new Date().getFullYear()} Renergence. All rights reserved.</p>
+                <p>&copy; ${new Date().getFullYear()} Multiple Natures International. All rights reserved.</p>
             </div>
         </div>
     </footer>
