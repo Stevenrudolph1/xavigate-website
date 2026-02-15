@@ -35,6 +35,60 @@
                 <p>
                     Most approaches to stuck situations focus on the person: try harder, communicate better, develop new skills, change your mindset. This works differently.
                 </p>
+
+                <!-- Operating loop diagram -->
+                <div style="text-align: center; margin: var(--space-site-lg) 0;">
+                    <svg viewBox="-60 0 460 350" width="460" height="350" role="img" aria-label="The Renergence operating loop: Signal, Diagnose, Move, Verify" style="max-width: 100%; height: auto;">
+                        <!-- Circle path (just the track, no arrow) -->
+                        <circle cx="170" cy="170" r="120" fill="none" stroke="var(--surface-divider-light)" stroke-width="2" />
+
+                        <!-- Arrowhead markers -->
+                        <defs>
+                            <marker id="arrow-ren" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <path d="M0,0 L8,3 L0,6" fill="var(--thread-renergence)" />
+                            </marker>
+                            <marker id="arrow-diag" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <path d="M0,0 L8,3 L0,6" fill="var(--thread-hnr)" />
+                            </marker>
+                            <marker id="arrow-move" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <path d="M0,0 L8,3 L0,6" fill="var(--thread-engagement)" />
+                            </marker>
+                            <marker id="arrow-ver" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                                <path d="M0,0 L8,3 L0,6" fill="var(--thread-mn)" />
+                            </marker>
+                        </defs>
+
+                        <!-- Arc segments between stations (clockwise: top→right→bottom→left→top) -->
+                        <!-- Signal → Diagnose (top to right) -->
+                        <path d="M 205,55 A 120,120 0 0,1 285,135" fill="none" stroke="var(--thread-renergence)" stroke-width="2.5" marker-end="url(#arrow-ren)" />
+                        <!-- Diagnose → Move (right to bottom) -->
+                        <path d="M 285,205 A 120,120 0 0,1 205,285" fill="none" stroke="var(--thread-hnr)" stroke-width="2.5" marker-end="url(#arrow-diag)" />
+                        <!-- Move → Verify (bottom to left) -->
+                        <path d="M 135,285 A 120,120 0 0,1 55,205" fill="none" stroke="var(--thread-engagement)" stroke-width="2.5" marker-end="url(#arrow-move)" />
+                        <!-- Verify → Signal (left to top) -->
+                        <path d="M 55,135 A 120,120 0 0,1 135,55" fill="none" stroke="var(--thread-mn)" stroke-width="2.5" marker-end="url(#arrow-ver)" />
+
+                        <!-- Station dots -->
+                        <circle cx="170" cy="50" r="8" fill="var(--thread-renergence)" />
+                        <circle cx="290" cy="170" r="8" fill="var(--thread-hnr)" />
+                        <circle cx="170" cy="290" r="8" fill="var(--thread-engagement)" />
+                        <circle cx="50" cy="170" r="8" fill="var(--thread-mn)" />
+
+                        <!-- Labels -->
+                        <text x="170" y="28" text-anchor="middle" font-family="var(--font-body)" font-size="14" font-weight="600" fill="var(--thread-renergence)">Signal</text>
+                        <text x="170" y="15" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--text-secondary)">(Renergence)</text>
+
+                        <text x="316" y="166" text-anchor="start" font-family="var(--font-body)" font-size="14" font-weight="600" fill="var(--thread-hnr)">Diagnose</text>
+                        <text x="316" y="181" text-anchor="start" font-family="var(--font-body)" font-size="11" fill="var(--text-secondary)">(S / A / P)</text>
+
+                        <text x="170" y="322" text-anchor="middle" font-family="var(--font-body)" font-size="14" font-weight="600" fill="var(--thread-engagement)">Move</text>
+                        <text x="170" y="337" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--text-secondary)">(specified)</text>
+
+                        <text x="24" y="166" text-anchor="end" font-family="var(--font-body)" font-size="14" font-weight="600" fill="var(--thread-mn)">Verify</text>
+                        <text x="24" y="181" text-anchor="end" font-family="var(--font-body)" font-size="11" fill="var(--text-secondary)">(did it shift?)</text>
+                    </svg>
+                </div>
+
                 <p>
                     The operating sequence is:
                 </p>
