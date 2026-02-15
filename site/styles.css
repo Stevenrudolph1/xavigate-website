@@ -587,14 +587,25 @@ body {
 .recognition-mn .recognition-area-tag { background-color: var(--thread-mn); }
 .recognition-engagement .recognition-area-tag { background-color: var(--thread-engagement); }
 
-/* Recognition hook — the scannable lead question */
+/* Recognition hook — the scannable lead question
+   Phase 1A: Elevated to typographic landmark.
+   Serif font + thread-colored left border = recognition moment. */
 .recognition-hook {
-    font-size: var(--text-xl);
-    font-weight: var(--weight-semibold);
+    font-family: var(--font-title);
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
     color: var(--text-primary);
-    line-height: var(--line-snug);
-    margin-bottom: var(--space-site-sm);
+    line-height: var(--line-tight);
+    margin-bottom: var(--space-site-md);
+    padding-left: var(--space-site-md);
+    border-left: 3px solid var(--surface-divider);
 }
+
+/* Thread-colored hook borders */
+.recognition-renergence .recognition-hook { border-left-color: var(--thread-renergence); }
+.recognition-hnr .recognition-hook { border-left-color: var(--thread-hnr); }
+.recognition-mn .recognition-hook { border-left-color: var(--thread-mn); }
+.recognition-engagement .recognition-hook { border-left-color: var(--thread-engagement); }
 
 .recognition-text-col p {
     font-size: var(--text-lg);
@@ -625,6 +636,10 @@ body {
     .recognition-cover-col .cover {
         transform: scale(0.85);
         transform-origin: center;
+    }
+    /* Phase 1A: Full-viewport recognition moments on mobile */
+    .recognition-hook {
+        padding: var(--space-site-sm) 0 var(--space-site-sm) var(--space-site-sm);
     }
 }
 
@@ -3492,6 +3507,135 @@ select:focus-visible,
     .course-accordion summary::after {
         transition: none;
     }
+}
+
+/* ============================================
+   Phase 5C: Alternating Recognition Layout
+   Recognitions 2 & 4 flip to cover-right, text-left.
+   Note: a <p> intro is child 1 of .recognitions-content,
+   so the four .recognition divs are children 2-5.
+   Recognitions 2 & 4 = nth-child(3) & nth-child(5) = odd.
+   ============================================ */
+.recognition.recognition-with-cover:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .recognition.recognition-with-cover:nth-child(odd) {
+        flex-direction: column;
+    }
+}
+
+/* ============================================
+   Phase 1C: Signal Bridge Enhancement
+   Split thesis into large statement + body text.
+   ============================================ */
+.signal-bridge {
+    background-color: var(--surface-page);
+    padding: var(--space-site-lg) 0;
+    border-bottom: var(--border-thin) solid var(--surface-card-border);
+}
+
+.signal-bridge-statement {
+    font-family: var(--font-title);
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    line-height: var(--line-tight);
+    text-align: center;
+    max-width: var(--content-wide);
+    margin: 0 auto var(--space-site-md);
+}
+
+.signal-bridge-body {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: var(--content-wide);
+    margin: 0 auto;
+    line-height: var(--line-relaxed);
+}
+
+/* ============================================
+   Phase 2A: Stat Block Component
+   Large numbers with labels. Authority anchor.
+   ============================================ */
+.stat-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-site-lg);
+    padding: var(--space-site-lg) 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--font-title);
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    line-height: 1;
+    display: block;
+}
+
+.stat-label {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    margin-top: var(--space-site-xs);
+    display: block;
+}
+
+.stat-divider {
+    width: 1px;
+    align-self: stretch;
+    background-color: var(--surface-divider);
+}
+
+@media (max-width: 600px) {
+    .stat-block {
+        flex-direction: column;
+        gap: var(--space-site-md);
+    }
+    .stat-divider {
+        width: 40px;
+        height: 1px;
+        align-self: center;
+    }
+    .stat-number {
+        font-size: var(--text-2xl);
+    }
+}
+
+/* ============================================
+   Phase 6B: Section Divider with Mark
+   Centered SVG mark + extending horizontal lines.
+   ============================================ */
+.section-divider-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: var(--space-site-md) 0;
+}
+
+.section-divider-mark::before,
+.section-divider-mark::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--surface-divider-light);
+}
+
+.section-divider-mark svg {
+    flex-shrink: 0;
+    margin: 0 var(--space-site-md);
+    opacity: 0.15;
 }
 
 .sr-only {
