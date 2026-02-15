@@ -1,7 +1,8 @@
 // Universal footer for all pages
 document.addEventListener('DOMContentLoaded', function() {
     const pathname = window.location.pathname;
-    const pathPrefix = pathname.includes('/books/') ? '../' : '';
+    const inSubdir = pathname.includes('/books/') || pathname.includes('/training/');
+    const pathPrefix = inSubdir ? '../' : '';
 
     const footerHTML = `
     <footer class="footer">

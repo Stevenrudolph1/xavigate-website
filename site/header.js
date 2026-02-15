@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const pathname = window.location.pathname;
     const currentPage = pathname.split('/').pop() || 'index.html';
 
-    // Detect if we're in a subdirectory (like /books/)
-    const pathPrefix = pathname.includes('/books/') ? '../' : '';
+    // Detect if we're in a subdirectory (like /books/ or /training/)
+    const inSubdir = pathname.includes('/books/') || pathname.includes('/training/');
+    const pathPrefix = inSubdir ? '../' : '';
 
     // Skip link (accessibility: first focusable element)
     const skipLink = document.createElement('a');
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="${pathPrefix}index.html" ${currentPage === 'index.html' ? 'class="active"' : ''}>Home</a></li>
                     <li><a href="${pathPrefix}how-it-works.html" ${currentPage === 'how-it-works.html' ? 'class="active"' : ''}>How It Works</a></li>
                     <li><a href="${pathPrefix}products.html" ${currentPage === 'products.html' ? 'class="active"' : ''}>Products</a></li>
-                    <li><a href="${pathPrefix}training.html" ${currentPage === 'training.html' ? 'class="active"' : ''}>Training</a></li>
+                    <li><a href="${pathPrefix}training.html" ${currentPage === 'training.html' || pathname.includes('/training/') ? 'class="active"' : ''}>Training</a></li>
                     <li><a href="${pathPrefix}pricing.html" ${currentPage === 'pricing.html' ? 'class="active"' : ''}>Pricing</a></li>
                     <li><a href="${pathPrefix}about.html" ${currentPage === 'about.html' ? 'class="active"' : ''}>About</a></li>
                 </ul>
