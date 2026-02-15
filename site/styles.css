@@ -1315,6 +1315,110 @@ body {
 }
 
 /* ============================================
+   Course Hero (thread-colored with SVG mark)
+   ============================================ */
+.course-hero {
+    position: relative;
+    overflow: hidden;
+    padding: var(--section-padding-y-lg) 0;
+    text-align: center;
+}
+
+.course-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.course-hero h1 {
+    font-size: var(--text-3xl);
+    color: #fff;
+    border-top: none;
+    padding-top: 0;
+    display: block;
+    margin-bottom: var(--space-site-sm);
+}
+
+.course-hero .page-intro {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.course-hero .course-hero__back {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+}
+
+.course-hero .course-hero__back:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.course-hero .course-hero__back:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* The huge background SVG mark */
+.course-hero__mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 420px;
+    opacity: 0.45;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .course-hero__mark {
+        width: 560px;
+        height: 560px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course-hero__mark {
+        opacity: 0.10;
+    }
+}
+
+/* Thread-specific backgrounds */
+.course-hero--hnr {
+    background: var(--thread-hnr);
+}
+
+.course-hero--mn {
+    background: var(--thread-mn);
+}
+
+.course-hero--mn h1 {
+    color: var(--text-primary);
+}
+
+.course-hero--mn .page-intro {
+    color: rgba(30, 26, 40, 0.75);
+}
+
+.course-hero--mn .course-hero__back {
+    color: rgba(30, 26, 40, 0.55);
+}
+
+.course-hero--mn .course-hero__back:hover {
+    color: rgba(30, 26, 40, 0.85);
+}
+
+.course-hero--mn .course-hero__back:focus-visible {
+    outline-color: rgba(30, 26, 40, 0.6);
+}
+
+.course-hero--engagement {
+    background: var(--thread-engagement);
+}
+
+/* ============================================
    Buttons and Links
    ============================================ */
 .cta-primary {
