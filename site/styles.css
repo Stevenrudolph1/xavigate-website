@@ -1924,7 +1924,7 @@ body {
 
 .pricing-tracks {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--grid-gap-lg);
     margin: var(--space-site-md) 0;
 }
@@ -1992,10 +1992,20 @@ body {
     background-color: var(--site-action-hover);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .pricing-tracks {
         grid-template-columns: 1fr;
     }
+}
+
+/* Upgrade callout for Materials Access tier */
+.pricing-upgrade-note {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-top: var(--space-site-sm);
+    padding-top: var(--space-site-sm);
+    border-top: var(--border-thin) solid var(--surface-card-border);
+    font-style: italic;
 }
 
 /* Course path breadcrumb (e.g. Foundation → Alignment → MNTEST) */
