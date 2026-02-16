@@ -1079,9 +1079,11 @@ body {
     padding: var(--space-site-xl) 0;
 }
 
-.thread-hnr-detail,
+.thread-hnr-detail {
+    background-color: var(--surface-panel-hnr);
+}
 .thread-engagement-detail {
-    background-color: var(--surface-panel);
+    background-color: var(--surface-panel-engagement);
 }
 
 .thread-header {
@@ -1122,7 +1124,8 @@ body {
 }
 
 .thread-hnr-detail .thread-layer,
-.thread-engagement-detail .thread-layer {
+.thread-engagement-detail .thread-layer,
+.thread-mn-detail .thread-layer {
     background-color: white;
 }
 
@@ -2318,7 +2321,7 @@ body {
 /* Frameworks list (single column) */
 .frameworks-list-section {
     padding: var(--section-padding-y-lg) 0;
-    background-color: var(--surface-panel);
+    background-color: var(--surface-panel-light);
 }
 
 .framework-item {
@@ -2373,6 +2376,11 @@ body {
     text-align: left;
     max-width: var(--content-wide);
     font-style: normal;
+}
+
+.coherence-section.panel-reversed-renergence .coherence-statement,
+.coherence-section.panel-reversed-renergence .coherence-content h2 {
+    color: #ffffff;
 }
 
 .coherence-prose {
@@ -2606,8 +2614,9 @@ body {
    ============================================ */
 .subscribe-section {
     padding: var(--section-padding-y-lg) 0;
-    background-color: var(--surface-panel);
-    border-top: var(--border-thin) solid var(--surface-card-border);
+    background-color: var(--thread-renergence);
+    color: rgba(255, 255, 255, 0.9);
+    border-top: none;
 }
 
 .subscribe-content {
@@ -2618,13 +2627,13 @@ body {
 
 .subscribe-content h2 {
     font-size: var(--text-2xl);
-    color: var(--text-primary);
+    color: #ffffff;
     margin-bottom: var(--space-site-xs);
 }
 
 .subscribe-desc {
     font-size: var(--text-lg);
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: var(--space-site-lg);
     line-height: var(--line-relaxed);
 }
@@ -3134,7 +3143,7 @@ body {
 }
 
 .about-section.alternate {
-    background-color: var(--surface-panel);
+    background-color: var(--surface-panel-light);
 }
 
 .about-content {
@@ -4138,6 +4147,109 @@ select:focus-visible,
 .panel-hnr        { background-color: var(--surface-panel-hnr); }
 .panel-engagement  { background-color: var(--surface-panel-engagement); }
 .panel-mn          { background-color: var(--surface-panel-mn); }
+
+/* ============================================
+   Reversed (dark) panels — vibrant thread bg + white text
+   ============================================
+   Use sparingly: 1-2 per page for CTAs, key statements,
+   or high-impact moments. Handles text, links, lists,
+   and nested elements. */
+
+.panel-reversed-renergence {
+    background-color: var(--thread-renergence);
+    color: rgba(255, 255, 255, 0.9);
+}
+.panel-reversed-hnr {
+    background-color: var(--thread-hnr);
+    color: rgba(255, 255, 255, 0.9);
+}
+.panel-reversed-engagement {
+    background-color: var(--thread-engagement);
+    color: rgba(255, 255, 255, 0.9);
+}
+.panel-reversed-mn {
+    background-color: var(--thread-mn-deep);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Reversed panel typography overrides */
+.panel-reversed-renergence,
+.panel-reversed-hnr,
+.panel-reversed-engagement,
+.panel-reversed-mn {
+    /* Focus-visible contrast for reversed panels */
+}
+
+.panel-reversed-renergence h2,
+.panel-reversed-renergence h3,
+.panel-reversed-hnr h2,
+.panel-reversed-hnr h3,
+.panel-reversed-engagement h2,
+.panel-reversed-engagement h3,
+.panel-reversed-mn h2,
+.panel-reversed-mn h3 {
+    color: #ffffff;
+}
+
+.panel-reversed-renergence p,
+.panel-reversed-renergence li,
+.panel-reversed-hnr p,
+.panel-reversed-hnr li,
+.panel-reversed-engagement p,
+.panel-reversed-engagement li,
+.panel-reversed-mn p,
+.panel-reversed-mn li {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.panel-reversed-renergence a,
+.panel-reversed-hnr a,
+.panel-reversed-engagement a,
+.panel-reversed-mn a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 2px;
+}
+
+.panel-reversed-renergence a:hover,
+.panel-reversed-hnr a:hover,
+.panel-reversed-engagement a:hover,
+.panel-reversed-mn a:hover {
+    text-decoration-color: rgba(255, 255, 255, 0.8);
+}
+
+.panel-reversed-renergence a:focus-visible,
+.panel-reversed-hnr a:focus-visible,
+.panel-reversed-engagement a:focus-visible,
+.panel-reversed-mn a:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.panel-reversed-renergence strong,
+.panel-reversed-hnr strong,
+.panel-reversed-engagement strong,
+.panel-reversed-mn strong {
+    color: #ffffff;
+}
+
+.panel-reversed-renergence .pricing-cta,
+.panel-reversed-hnr .pricing-cta,
+.panel-reversed-engagement .pricing-cta,
+.panel-reversed-mn .pricing-cta {
+    background-color: #ffffff;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.panel-reversed-renergence .pricing-cta:hover,
+.panel-reversed-hnr .pricing-cta:hover,
+.panel-reversed-engagement .pricing-cta:hover,
+.panel-reversed-mn .pricing-cta:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
 
 /* ============================================
    Section Rule — lightweight horizontal divider
