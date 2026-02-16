@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h4>Renergence</h4>
                     <ul>
                         <li><a href="${pathPrefix}about.html">About</a></li>
-                        <li><a href="${pathPrefix}our-model.html">Our Model</a></li>
+                        <li><a href="${pathPrefix}licensing.html">Licensing</a></li>
                         <li><a href="${pathPrefix}ai-policy.html">AI Policy</a></li>
                         <li><a href="${pathPrefix}terms.html">Terms of Service</a></li>
                         <li><a href="${pathPrefix}privacy.html">Privacy Policy</a></li>

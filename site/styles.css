@@ -1565,12 +1565,19 @@ body {
     opacity: 0.25;
 }
 
-/* Pricing grid wrapper for training pages */
+/* Pricing grid wrapper for training pages — 3 columns */
 .pricing-grid-wrap {
     margin: var(--space-site-md) 0;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-site-sm);
     margin-bottom: var(--space-site-md);
+    max-width: none;
+}
+
+@media (max-width: 768px) {
+    .pricing-grid-wrap {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Course path breadcrumb (e.g. Foundation → Alignment → MNTEST) */
@@ -1675,6 +1682,17 @@ body {
 
 .course-listing-body {
     padding: var(--space-site-sm) var(--space-site-md) var(--space-site-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-listing-body .pricing-desc {
+    flex: 1;
+}
+
+.course-listing-body .course-listing-link {
+    margin-top: auto;
 }
 
 .course-listing .pricing-desc {
