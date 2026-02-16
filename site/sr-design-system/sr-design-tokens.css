@@ -1,5 +1,5 @@
 /* ============================================
-   SR DESIGN TOKENS v12.1
+   SR DESIGN TOKENS v12.2
    ============================================
 
    SINGLE SOURCE OF TRUTH.
@@ -13,7 +13,7 @@
    Source: #0D1164 · #640D5F · #EA2264 · #F78D60
    Threads: palette hues at matched tonal depth (navy, purple, crimson, warm)
 
-   Last updated: 2026-02-09
+   Last updated: 2026-02-16
    ============================================ */
 
 :root {
@@ -98,12 +98,21 @@
   --surface-panel: #eeebef;            /* noticeably off-white, warm-purple */
   --surface-panel-light: #f3f0f3;      /* halfway between card and panel */
 
-  /* Thread-tinted panels — very faint wash of each thread color.
-     Use for sections that belong to a specific area. */
-  --surface-panel-renergence: #ededfa;   /* faint navy-blue wash  */
-  --surface-panel-hnr: #f3edf2;          /* faint purple wash     */
-  --surface-panel-engagement: #faf0f2;   /* faint pink wash       */
-  --surface-panel-mn: #faf3ee;           /* faint warm-orange wash */
+  /* Thread-tinted panels — visible wash of each thread color.
+     Use for sections that belong to a specific area.
+     Saturation increased 2026-02-16 for visible alternation. */
+  --surface-panel-renergence: #e2e2f7;   /* navy-blue wash  */
+  --surface-panel-hnr: #ede0eb;          /* purple wash     */
+  --surface-panel-engagement: #f7e0ec;   /* pink wash       */
+  --surface-panel-mn: #f7e8d8;           /* warm-orange wash */
+
+  /* ============================================
+     GRADIENTS (GOV-07 governed)
+     --gradient-hero: homepage + landing page heroes ONLY
+     --gradient-section-break: section transitions ONLY
+     ============================================ */
+  --gradient-hero: linear-gradient(135deg, #0D1164 0%, #1a0d3d 50%, #640D5F 100%);
+  --gradient-section-break: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-panel-renergence) 100%);
 
   /* ============================================
      COVER DIMENSIONS
@@ -111,7 +120,7 @@
   --cover-width: 175px;
   --cover-height: 262px;
   --cover-aspect: 1.497;
-  --cover-shadow: 0 1px 4px rgba(13,17,100,0.18), 0 8px 24px rgba(13,17,100,0.12);
+  --cover-shadow: 0 2px 6px rgba(13,17,100,0.22), 0 10px 30px rgba(13,17,100,0.18);
 
   /* ============================================
      COVER GRID (5-zone vertical stack)

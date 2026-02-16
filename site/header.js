@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const inSubdir = pathname.includes('/books/') || pathname.includes('/training/');
     const pathPrefix = inSubdir ? '../' : '';
 
+    // Favicon injection (single source for all pages)
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/svg+xml';
+    favicon.href = (inSubdir ? '../' : '') + 'images/favicon.svg';
+    document.head.appendChild(favicon);
+
     // Skip link (accessibility: first focusable element)
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
