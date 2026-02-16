@@ -280,13 +280,12 @@ body {
 /* Pricing Cards */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-site-lg);
     margin-bottom: var(--space-site-xl);
-    max-width: 1000px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
@@ -297,7 +296,7 @@ body {
     border-radius: var(--site-radius);
     border: var(--border-thin) solid var(--surface-card-border);
     border-left: 4px solid var(--site-accent);
-    padding: var(--space-site-lg);
+    padding: var(--space-site-md);
     display: flex;
     flex-direction: column;
 }
