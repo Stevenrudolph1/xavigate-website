@@ -2700,7 +2700,7 @@ body {
    Footer
    ============================================ */
 .footer {
-    background-color: var(--site-action-bg);
+    background-color: #080E50;
     color: white;
     padding: var(--space-site-lg) 0 var(--space-site-md);
 }
