@@ -1651,15 +1651,23 @@ body {
 /* ============================================
    Course Materials Table (training pages)
    ============================================ */
+.course-materials-wrap {
+    margin: var(--space-site-sm) 0 0;
+    border: 1px solid var(--surface-card-border);
+    border-radius: var(--site-radius-sm);
+    overflow: hidden;
+}
+
 .course-materials-table {
     width: 100%;
     border-collapse: collapse;
 }
 
 .course-materials-table thead th {
-    padding: var(--space-site-sm);
+    padding: 0.65rem var(--space-site-sm);
     font-weight: var(--weight-semibold);
     font-size: var(--text-sm);
+    background-color: rgba(0, 0, 0, 0.03);
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: var(--tracking-caps);
@@ -1668,14 +1676,17 @@ body {
 }
 
 .course-materials-table td {
-    padding: var(--space-site-sm);
+    padding: 0.6rem var(--space-site-sm);
     vertical-align: top;
     border-bottom: 1px solid var(--surface-divider-light);
+    font-size: var(--text-sm);
+    line-height: var(--line-normal);
 }
 
 .course-materials-table td:first-child {
     font-weight: var(--weight-semibold);
     white-space: nowrap;
+    width: 1%;
 }
 
 .course-materials-table td:last-child {
@@ -1688,16 +1699,30 @@ body {
 
 .tag-optional {
     display: inline-block;
-    font-size: var(--text-xs);
-    font-weight: var(--weight-regular);
+    font-size: 0.65rem;
+    font-weight: var(--weight-medium);
     color: var(--text-muted);
-    background-color: var(--surface-page);
-    padding: 1px 6px;
+    border: 1px solid var(--surface-card-border);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.15rem 0.5rem;
     border-radius: var(--site-radius-xs);
-    margin-left: 4px;
-    vertical-align: middle;
+    margin-left: 0.35rem;
+    vertical-align: baseline;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: var(--tracking-wide);
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .course-materials-table td:first-child {
+        white-space: normal;
+    }
+    .tag-optional {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.25rem;
+        width: fit-content;
+    }
 }
 
 /* ============================================
@@ -1738,6 +1763,9 @@ body {
 .supplementary-reading {
     font-size: var(--text-sm);
     color: var(--text-secondary);
+    margin-top: var(--space-site-md);
+    padding-top: var(--space-site-sm);
+    border-top: 1px solid var(--surface-divider-light);
 }
 
 /* ============================================
