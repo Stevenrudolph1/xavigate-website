@@ -1568,6 +1568,9 @@ body {
 /* Pricing grid wrapper for training pages */
 .pricing-grid-wrap {
     margin: var(--space-site-md) 0;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-site-sm);
+    margin-bottom: var(--space-site-md);
 }
 
 /* Course path breadcrumb (e.g. Foundation → Alignment → MNTEST) */
@@ -1599,22 +1602,65 @@ body {
 .next-step-card--renergence { border-top: 3px solid var(--thread-renergence); }
 
 /* ============================================
+   Training Overview: Pricing Tier Cards
+   (Self-Paced / With Steven on training.html)
+   ============================================ */
+.pricing-tier {
+    padding: 0;
+    border-left: 4px solid var(--surface-card-border);
+    overflow: hidden;
+}
+
+.pricing-tier .pricing-header {
+    margin-bottom: 0;
+    padding: var(--space-site-sm) var(--space-site-md);
+    border-bottom: 1px solid var(--surface-card-border);
+    background-color: var(--surface-page);
+}
+
+.pricing-tier .pricing-header h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin: 0;
+}
+
+.pricing-tier .pricing-desc {
+    padding: var(--space-site-sm) var(--space-site-md) var(--space-site-md);
+    font-size: var(--text-sm);
+    margin-bottom: 0;
+}
+
+.pricing-tier.pricing-card-featured {
+    border-left-color: var(--thread-renergence);
+}
+
+/* ============================================
    Training Overview: Course Listing Cards
    ============================================ */
 .course-listing {
     margin: var(--space-site-md) 0;
-    padding: var(--space-site-md);
-    border-left: none;
+    padding: 0;
+    border-left: 4px solid var(--surface-card-border);
+    border-top: none;
+    overflow: hidden;
 }
 
+/* Thread-colored left border */
+.course-listing.next-step-card--renergence { border-left-color: var(--thread-renergence); }
+.course-listing.next-step-card--hnr { border-left-color: var(--thread-hnr); }
+.course-listing.next-step-card--mn { border-left-color: var(--thread-mn); }
+.course-listing.next-step-card--engagement { border-left-color: var(--thread-engagement); }
+
 .course-listing .pricing-header {
-    margin-bottom: var(--space-site-sm);
-    padding-bottom: 0;
-    border-bottom: none;
+    margin-bottom: 0;
+    padding: var(--space-site-sm) var(--space-site-md);
+    border-bottom: 1px solid var(--surface-card-border);
+    background-color: var(--surface-page);
 }
 
 .course-listing .pricing-header h3 {
     font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
     margin: 0;
 }
 
@@ -1627,12 +1673,17 @@ body {
     text-decoration: underline;
 }
 
+.course-listing-body {
+    padding: var(--space-site-sm) var(--space-site-md) var(--space-site-md);
+}
+
 .course-listing .pricing-desc {
     font-size: var(--text-sm);
     margin-bottom: var(--space-site-xs);
 }
 
 .course-listing-question {
+    font-family: var(--font-title);
     font-style: italic;
     font-size: var(--text-base) !important;
     color: var(--text-primary);
@@ -1655,6 +1706,17 @@ body {
     text-decoration: underline;
     text-underline-offset: 2px;
     font-size: var(--text-sm);
+}
+
+/* Tighter grid gap when grid contains course listings */
+.pricing-grid:has(.course-listing) {
+    gap: var(--space-site-sm);
+    margin-bottom: var(--space-site-md);
+}
+
+/* Remove card margin when inside a grid (grid gap handles spacing) */
+.pricing-grid .course-listing {
+    margin: 0;
 }
 
 /* Section label for focus tracks group */
