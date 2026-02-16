@@ -6,7 +6,7 @@
     <title>Renergence</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="sr-design-system/sr-design-tokens.css">
-    <link rel="stylesheet" href="styles.css?v=20260216bb">
+    <link rel="stylesheet" href="styles.css?v=20260216cc">
     <link rel="stylesheet" href="sr-design-system/sr-covers.css">
     <script src="header.js"></script>
 </head>
@@ -43,15 +43,7 @@
     </section>
 
     <!-- Credibility Stat Block (Encounter Step 3: Authority Anchor) -->
-    <div class="section-divider-mark" aria-hidden="true">
-        <svg width="32" height="32" viewBox="0 0 50 50">
-            <path d="M14 25 A11 11 0 0 1 36 25" stroke="var(--thread-renergence)" stroke-width="1.8" fill="none" />
-            <path d="M36 25 A11 11 0 0 1 14 25" stroke="var(--thread-renergence)" stroke-width="1.8" fill="none" />
-            <polygon points="12,21 16,25 17,20" fill="var(--thread-renergence)" />
-            <polygon points="38,29 34,25 33,30" fill="var(--thread-renergence)" />
-        </svg>
-    </div>
-    <section style="padding: var(--space-site-sm) 0; background-color: var(--surface-card);">
+    <section class="panel-alt" style="padding: var(--space-site-sm) 0;">
         <div class="container">
             <div class="stat-block">
                 <div class="stat-item">
@@ -78,14 +70,10 @@
     </section>
 
     <!-- SECTION 2: Four Recognitions (Encounter Step 4: Personal Recognition) -->
-    <section class="recognitions">
+    <section class="recognition-section panel-renergence">
         <div class="container">
+            <p class="recognition-intro">Start with what you recognize.</p>
             <div class="recognitions-content">
-
-                <p style="margin-bottom: var(--space-site-lg); text-align: center; font-size: var(--text-lg);">
-                    Start with what you recognize.
-                </p>
-
                 <div class="recognition recognition-with-cover recognition-renergence">
                     <div class="recognition-cover-col">
                         <div class="cover thread-renergence tier-gateway">
@@ -116,9 +104,13 @@
                         <a href="#book-renergence" class="recognition-link">Read <em>Renergence</em> free &darr;</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <hr class="section-rule-light" aria-hidden="true">
-
+    <section class="recognition-section panel-hnr">
+        <div class="container">
+            <div class="recognitions-content">
                 <div class="recognition recognition-with-cover recognition-hnr">
                     <div class="recognition-cover-col">
                         <div class="cover thread-hnr tier-gateway">
@@ -150,9 +142,13 @@
                         <a href="#book-hnr" class="recognition-link">Read <em>Heroes Not Required</em> free &darr;</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <hr class="section-rule-light" aria-hidden="true">
-
+    <section class="recognition-section panel-mn">
+        <div class="container">
+            <div class="recognitions-content">
                 <div class="recognition recognition-with-cover recognition-mn">
                     <div class="recognition-cover-col">
                         <div class="cover thread-mn tier-gateway">
@@ -184,9 +180,13 @@
                         <a href="#book-mn" class="recognition-link">Read <em>Multiple Natures</em> free &darr;</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <hr class="section-rule-light" aria-hidden="true">
-
+    <section class="recognition-section panel-engagement">
+        <div class="container">
+            <div class="recognitions-content">
                 <div class="recognition recognition-with-cover recognition-engagement">
                     <div class="recognition-cover-col">
                         <div class="cover thread-engagement tier-gateway">
@@ -216,20 +216,9 @@
                         <a href="#book-engagement" class="recognition-link">Read <em>The Engagement Map</em> free &darr;</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-    <!-- Divider: Recognitions → Get Books -->
-    <div class="section-divider-mark" aria-hidden="true">
-        <svg width="32" height="32" viewBox="0 0 50 50">
-            <path d="M14 25 A11 11 0 0 1 36 25" stroke="var(--thread-renergence)" stroke-width="1.8" fill="none" />
-            <path d="M36 25 A11 11 0 0 1 14 25" stroke="var(--thread-renergence)" stroke-width="1.8" fill="none" />
-            <polygon points="12,21 16,25 17,20" fill="var(--thread-renergence)" />
-            <polygon points="38,29 34,25 33,30" fill="var(--thread-renergence)" />
-        </svg>
-    </div>
 
     <!-- SECTION 3: Get Books (Encounter Step 5: Action) -->
     <section id="get-books" class="get-book">
@@ -272,16 +261,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Divider: Get Books → Subscribe -->
-    <div class="section-divider-mark" aria-hidden="true">
-        <svg width="32" height="32" viewBox="0 0 50 50">
-            <path d="M14 25 A11 11 0 0 1 36 25" stroke="var(--thread-renergence)" stroke-width="1.8" fill="none" />
-            <path d="M36 25 A11 11 0 0 1 14 25" stroke="var(--thread-renergence)" stroke-width="1.8" fill="none" />
-            <polygon points="12,21 16,25 17,20" fill="var(--thread-renergence)" />
-            <polygon points="38,29 34,25 33,30" fill="var(--thread-renergence)" />
-        </svg>
-    </div>
 
     <!-- Substack Subscribe -->
     <section class="subscribe-section">

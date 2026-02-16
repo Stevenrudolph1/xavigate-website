@@ -535,7 +535,7 @@ body {
    Recognitions Section (Homepage encounter)
    ============================================ */
 .recognitions {
-    padding: var(--section-padding-y-lg) 0;
+    padding: var(--space-site-lg) 0 var(--space-site-sm) 0;
     background-color: var(--surface-card);
 }
 
@@ -1817,7 +1817,7 @@ body {
 }
 
 .course-kit__item {
-    padding: var(--space-site-sm) 0;
+    padding: var(--space-site-xs) 0;
     border-bottom: 1px solid var(--surface-divider-light);
 }
 
@@ -2002,7 +2002,11 @@ body {
    Course "Who This Is For" Block
    ============================================ */
 .course-who-block {
-    padding: var(--space-site-md) 0;
+    padding: var(--space-site-md) var(--space-site-lg);
+    background: var(--surface-card);
+    border-left: 4px solid var(--thread-renergence);
+    border-radius: var(--site-radius);
+    box-shadow: var(--shadow-sm);
 }
 
 .course-who-block h2 {
@@ -2013,6 +2017,7 @@ body {
     font-size: var(--text-lg);
     line-height: var(--line-relaxed);
     color: var(--text-body);
+    margin-bottom: 0;
     max-width: var(--prose-max-width);
 }
 
@@ -2087,15 +2092,42 @@ body {
    ============================================ */
 .course-mechanic-list {
     margin: var(--space-site-md) 0 0;
+    counter-reset: mechanic-step;
 }
 
 .course-mechanic {
     padding: var(--space-site-md) 0;
+    padding-left: 3.5rem;
+    position: relative;
     border-bottom: 1px solid var(--surface-divider-light);
+    counter-increment: mechanic-step;
+}
+
+.course-mechanic::before {
+    content: counter(mechanic-step);
+    position: absolute;
+    left: 0;
+    top: var(--space-site-md);
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--thread-renergence);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 .course-mechanic:first-child {
     padding-top: 0;
+}
+
+.course-mechanic:first-child::before {
+    top: 0;
 }
 
 .course-mechanic:last-child {
@@ -2127,6 +2159,20 @@ body {
     line-height: var(--line-relaxed);
     margin: 0;
     max-width: var(--prose-max-width);
+}
+
+@media (max-width: 768px) {
+    .course-who-block {
+        padding: var(--space-site-sm) var(--space-site-md);
+    }
+    .course-mechanic {
+        padding-left: 2.75rem;
+    }
+    .course-mechanic::before {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.75rem;
+    }
 }
 
 /* ============================================
@@ -2728,7 +2774,7 @@ body {
    ============================================ */
 .get-book {
     padding: var(--section-padding-y-lg) 0;
-    background-color: var(--surface-card);
+    background-color: var(--surface-panel-light);
 }
 
 .get-book h2 {
@@ -4611,16 +4657,14 @@ select:focus-visible,
 /* ============================================
    Phase 5C: Alternating Recognition Layout
    Recognitions 2 & 4 flip to cover-right, text-left.
-   Note: a <p> intro is child 1 of .recognitions-content,
-   so the four .recognition divs are children 2-5.
-   Recognitions 2 & 4 = nth-child(3) & nth-child(5) = odd.
+   Targets even recognition-sections (HNR and Engagement Map).
    ============================================ */
-.recognition.recognition-with-cover:nth-child(odd) {
+.recognition-section:nth-of-type(even) .recognition-with-cover {
     flex-direction: row-reverse;
 }
 
 @media (max-width: 768px) {
-    .recognition.recognition-with-cover:nth-child(odd) {
+    .recognition-section:nth-of-type(even) .recognition-with-cover {
         flex-direction: column;
     }
 }
@@ -4885,6 +4929,26 @@ select:focus-visible,
     border-top: 1px solid var(--surface-divider-light);
     margin: var(--section-padding-y) auto;
     max-width: var(--content-mid);
+}
+
+/* ============================================
+   Homepage Recognition Panels
+   Each book block gets its thread-tinted background
+   as a full-width section, breaking the white monotone.
+   ============================================ */
+.recognition-section {
+    padding: clamp(2.5rem, 2rem + 2vw, 4rem) 0;
+}
+
+.recognition-section .recognition {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.recognition-section .recognitions-content {
+    max-width: var(--content-mid);
+    margin: 0 auto;
 }
 
 .sr-only {
