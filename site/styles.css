@@ -1734,6 +1734,43 @@ body {
     }
 }
 
+/* Two-track pricing comparison — course pages */
+.pricing-tracks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-site-md);
+    margin: var(--space-site-md) 0;
+}
+
+.pricing-tracks .pricing-card {
+    border-left-width: 3px;
+    padding: var(--space-site-md);
+}
+
+.pricing-tracks .pricing-header {
+    margin-bottom: var(--space-site-sm);
+    padding-bottom: var(--space-site-sm);
+}
+
+.pricing-tracks .pricing-header h3 {
+    font-size: var(--text-lg);
+}
+
+.pricing-tracks .pricing-desc {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-site-sm);
+}
+
+.pricing-tracks .pricing-features li {
+    font-size: var(--text-xs);
+}
+
+@media (max-width: 600px) {
+    .pricing-tracks {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Course path breadcrumb (e.g. Foundation → Alignment → MNTEST) */
 .course-path {
     margin: var(--space-site-md) 0;
