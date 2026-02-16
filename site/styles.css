@@ -1734,8 +1734,12 @@ body {
     }
 }
 
-/* Two-track pricing comparison — course pages */
-.about-content:has(.pricing-tracks) {
+/* Widen .about-content when it contains multi-column layouts
+   that need more than the default 700px */
+.about-content:has(.pricing-tracks),
+.about-content:has(.pricing-grid),
+.about-content:has(.pricing-grid-wrap),
+.about-content:has(.course-materials-table) {
     max-width: var(--content-full);
 }
 
