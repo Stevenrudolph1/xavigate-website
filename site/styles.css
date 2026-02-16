@@ -1351,22 +1351,42 @@ body {
    Page Header (shared across pages)
    ============================================ */
 .page-header {
-    background-color: var(--surface-panel-light);
-    padding: var(--section-padding-y) 0;
+    background-color: var(--thread-renergence);
+    padding: var(--section-padding-y-lg) 0;
     text-align: center;
 }
 
 .page-header h1 {
     font-size: var(--text-3xl);
-    color: var(--text-primary);
+    color: #ffffff;
     margin-bottom: var(--space-site-sm);
 }
 
 .page-intro {
     font-size: var(--text-lg);
-    color: var(--text-secondary);
     max-width: var(--content-mid);
     margin: 0 auto;
+}
+
+.page-header .page-intro {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.page-header a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 2px;
+}
+
+.page-header a:hover {
+    text-decoration-color: rgba(255, 255, 255, 0.8);
+}
+
+.page-header a:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* ============================================
