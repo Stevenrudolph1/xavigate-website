@@ -1,6 +1,6 @@
-# Xavigate Website
+# Renergence Website
 
-Static website for [Xavigate](https://xavigate.com) — the publishing and practice platform built on Steven Rudolph's work across four areas: Renergence, Structure, Alignment, and Positioning.
+Static website for [Renergence](https://renergence.com) — the publishing and practice platform built on Steven Rudolph's work across four areas: Renergence, Structure, Alignment, and Positioning.
 
 ## Structure
 

@@ -1,10 +1,9 @@
-# Xavigate Website Governance
+# Renergence Website Governance
 
 ## Deployment
 
-This repo deploys to DigitalOcean App Platform: `goldfish-app-vsl8y.ondigitalocean.app`
+This repo deploys to DigitalOcean App Platform at `renergence.com`
 - Auto-deploys from GitHub on push
-- NO custom domain yet (old xavigate.com is still WordPress)
 - This site is for **books, pricing, about, training** — static content
 - **Diagnostic/encounter UI does NOT go here** — it lives on `mcp.xavigate.com` (separate server, separate repo: `xavigate-mcp/`)
 

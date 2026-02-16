@@ -1,4 +1,4 @@
 // Navigator configuration — change this one file for different environments
-window.XAVIGATE_CONFIG = {
+window.RENERGENCE_CONFIG = {
   apiUrl: 'https://mcp.xavigate.com/api/navigate'
 };

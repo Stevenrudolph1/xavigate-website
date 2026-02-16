@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var API_URL = (window.XAVIGATE_CONFIG && window.XAVIGATE_CONFIG.apiUrl) || '/api/navigate';
+  var API_URL = (window.RENERGENCE_CONFIG && window.RENERGENCE_CONFIG.apiUrl) || '/api/navigate';
   var MAX_EXCHANGES = 5;
   var OPENING_MESSAGE =
     'This is a collection of books and tools \u2014 not a course. There\u2019s no right order, and you don\u2019t need to read everything. It\u2019s designed to be coherent as a whole, and usable in parts.\n\nTell me what\u2019s going on and I\u2019ll point you to where it starts.';

@@ -1,6 +1,6 @@
-name: xavigate-website
+name: renergence-website
 static_sites:
-  - name: xavigate-site
+  - name: renergence-site
     github:
       branch: main
       deploy_on_push: true
