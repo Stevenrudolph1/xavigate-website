@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="${pathPrefix}terms.html">Terms of Service</a></li>
                         <li><a href="${pathPrefix}privacy.html">Privacy Policy</a></li>
                         <li><a href="${pathPrefix}accessibility.html">Accessibility</a></li>
-                        <li><a href="${pathPrefix}contact.html">Contact</a></li>
                         <li><a href="https://renergence.substack.com" target="_blank" rel="noopener">Substack</a></li>
+                        <li><a href="${pathPrefix}contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
