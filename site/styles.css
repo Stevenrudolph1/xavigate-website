@@ -1852,7 +1852,8 @@ body {
     padding-bottom: 0;
 }
 
-.course-kit__item h3 {
+.course-kit__item h3,
+.about-content .course-kit__item h3 {
     font-size: var(--text-base);
     font-weight: var(--weight-semibold);
     color: var(--text-primary);
@@ -1860,7 +1861,8 @@ body {
     line-height: var(--line-snug);
 }
 
-.course-kit__item p {
+.course-kit__item p,
+.about-content .course-kit__item p {
     font-size: var(--text-sm);
     color: var(--text-secondary);
     line-height: var(--line-normal);
