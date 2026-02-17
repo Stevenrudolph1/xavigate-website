@@ -2396,6 +2396,7 @@ body {
     flex-shrink: 0;
 }
 
+.focus-track-card--renergence .focus-track-card__accent { background: var(--thread-renergence); }
 .focus-track-card--hnr .focus-track-card__accent { background: var(--thread-hnr); }
 .focus-track-card--mn .focus-track-card__accent { background: var(--thread-mn); }
 .focus-track-card--engagement .focus-track-card__accent { background: var(--thread-engagement); }
@@ -2405,9 +2406,10 @@ body {
     flex: 1;
 }
 
-.focus-track-card__body h3 {
+.focus-track-card .focus-track-card__body h3 {
     font-size: var(--text-3xl);
     margin: 0 0 var(--space-site-xs);
+    margin-top: 0;
     line-height: 1.2;
 }
 
@@ -2427,6 +2429,12 @@ body {
 
 .focus-track-card__outcome {
     margin-bottom: var(--space-site-sm);
+}
+
+.focus-track-card__question {
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: var(--space-site-xs);
 }
 
 .focus-track-card__meta {
