@@ -2303,7 +2303,7 @@ body {
 }
 
 .course-listing .pricing-header h3 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
     margin: 0;
 }
 
@@ -2406,9 +2406,9 @@ body {
 }
 
 .focus-track-card__body h3 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
     margin: 0 0 var(--space-site-xs);
-    line-height: 1.25;
+    line-height: 1.2;
 }
 
 .focus-track-card__body h3 a {
