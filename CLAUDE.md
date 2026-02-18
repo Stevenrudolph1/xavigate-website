@@ -140,11 +140,8 @@ Use these variables in CSS, not hard-coded hex values.
 
 ## AI Policy
 
-**Positioning line:** "AI is optional. The work is not."
-
 **Where it appears:**
-- How It Works page (in body content)
-- Footer tagline on all pages
+- Footer tagline on all pages (if applicable)
 
 **Terms page covers:**
 - Personal AI use (allowed for summarization, analysis)
