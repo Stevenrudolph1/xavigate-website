@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 50 50">
-  <!-- Engagement: Crosshair — where you stand -->
-  <line x1="25" y1="6" x2="25" y2="44" stroke="#c8b030" stroke-width="1.8" fill="none" />
-  <line x1="6" y1="25" x2="44" y2="25" stroke="#c8b030" stroke-width="1.8" fill="none" />
-  <circle cx="25" cy="25" r="8" stroke="#c8b030" stroke-width="1.8" fill="none" />
-</svg>
