@@ -5,3 +5,28 @@ static_sites:
       branch: main
       deploy_on_push: true
     source_dir: site
+functions:
+  - name: contact
+    source_dir: functions
+    github:
+      branch: main
+      deploy_on_push: true
+    envs:
+      - key: SMTP_HOST
+        value: email-smtp.us-east-1.amazonaws.com
+        scope: RUN_TIME
+      - key: SMTP_PORT
+        value: "587"
+        scope: RUN_TIME
+      - key: SMTP_USER
+        scope: RUN_TIME
+        type: SECRET
+      - key: SMTP_PASS
+        scope: RUN_TIME
+        type: SECRET
+      - key: FROM_EMAIL
+        value: steven@xavigate.com
+        scope: RUN_TIME
+      - key: FROM_NAME
+        value: Renergence Contact
+        scope: RUN_TIME

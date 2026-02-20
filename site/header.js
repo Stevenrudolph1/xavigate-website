@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="${pathPrefix}tools.html" ${currentPage === 'tools.html' ? 'class="active"' : ''}>Tools</a></li>
                     <li><a href="${pathPrefix}articles.html" ${currentPage === 'articles.html' ? 'class="active"' : ''}>Articles</a></li>
                     <li><a href="${pathPrefix}about.html" ${currentPage === 'about.html' ? 'class="active"' : ''}>About</a></li>
+                    <li><a href="${pathPrefix}contact.html" ${currentPage === 'contact.html' ? 'class="active"' : ''}>Contact</a></li>
                 </ul>
             </div>
         </nav>

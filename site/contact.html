@@ -18,6 +18,81 @@
     <link rel="stylesheet" href="sr-design-system/sr-design-tokens.css">
     <link rel="stylesheet" href="styles.css?v=20260216g">
     <script src="header.js"></script>
+    <style>
+        .contact-form-wrap {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-site-md);
+            margin-top: var(--space-site-lg);
+        }
+        .contact-form label {
+            display: block;
+            font-size: var(--text-sm);
+            font-weight: var(--weight-medium);
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            font-family: var(--font-body);
+            font-size: var(--text-md);
+            color: var(--text-primary);
+            background: var(--surface-page);
+            border: 1px solid var(--border-light);
+            border-radius: var(--site-radius);
+            box-sizing: border-box;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--site-accent);
+            box-shadow: 0 0 0 3px rgba(var(--site-accent-rgb, 80, 90, 160), 0.12);
+        }
+        .contact-form textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+        .contact-form-submit {
+            margin-top: var(--space-site-sm);
+        }
+        .contact-form-status {
+            padding: 14px 18px;
+            border-radius: var(--site-radius);
+            font-size: var(--text-md);
+            display: none;
+        }
+        .contact-form-status.success {
+            background: #f0faf4;
+            border: 1px solid #6fcf97;
+            color: #1a6b3a;
+        }
+        .contact-form-status.error {
+            background: #fff5f5;
+            border: 1px solid #fc8181;
+            color: #c53030;
+        }
+        .contact-info-block {
+            margin-top: var(--space-site-xl);
+            padding-top: var(--space-site-lg);
+            border-top: 1px solid var(--border-light);
+            text-align: center;
+        }
+        .contact-info-block p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--line-relaxed);
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Page Header -->
@@ -36,24 +111,104 @@
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
-            <div class="contact-content">
-                <p>
-                    Questions about the books, the training, or how to use the frameworks in your work:
+            <div class="contact-form-wrap">
+                <p class="contact-content" style="text-align:center;">
+                    Questions about the books, the training, or how to use the frameworks in your work.
                 </p>
-                <p class="contact-email">
-                    <a href="mailto:support@renergence.com">support@renergence.com</a>
-                </p>
-                <p>
-                    We make books, courses, and tools. If you need someone who works with clients directly, we can connect you with practitioners trained in these frameworks.
-                </p>
-                <p>
-                    Not sure where to start? The <a href="index.html#get-books">free books</a> are the starting point for everyone. No email required.
-                </p>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div>
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" autocomplete="name" required>
+                    </div>
+                    <div>
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" autocomplete="email" required>
+                    </div>
+                    <div>
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" required>
+                    </div>
+                    <div>
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" required></textarea>
+                    </div>
+                    <div class="contact-form-submit">
+                        <button type="submit" class="btn btn-primary" id="contactSubmit">Send Message</button>
+                    </div>
+                    <div class="contact-form-status" id="contactStatus" role="alert" aria-live="polite"></div>
+                </form>
+
+                <div class="contact-info-block">
+                    <p>
+                        Multiple Natures International<br>
+                        1512 Palisade Ave. #12N<br>
+                        Fort Lee, NJ 07024, USA<br>
+                        <a href="mailto:support@multiplenatures.com" style="color:var(--site-accent);">support@multiplenatures.com</a>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+
     <script src="footer.js"></script>
     <script src="navigator-config.js"></script>
     <script src="navigator-widget.js"></script>
+    <script>
+        (function () {
+            const form = document.getElementById('contactForm');
+            const status = document.getElementById('contactStatus');
+            const submitBtn = document.getElementById('contactSubmit');
+
+            // Function URL will be injected at deploy time via DO Functions endpoint
+            // Format: https://<app-slug>.ondigitalocean.app/api/contact
+            const FUNCTION_URL = '/api/contact';
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                status.style.display = 'none';
+                status.className = 'contact-form-status';
+
+                const name = document.getElementById('contact-name').value.trim();
+                const email = document.getElementById('contact-email').value.trim();
+                const subject = document.getElementById('contact-subject').value.trim();
+                const message = document.getElementById('contact-message').value.trim();
+
+                if (!name || !email || !subject || !message) {
+                    showStatus('error', 'Please fill in all fields.');
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending…';
+
+                try {
+                    const res = await fetch(FUNCTION_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name, email, subject, message }),
+                    });
+                    const data = await res.json();
+                    if (res.ok && data.success) {
+                        showStatus('success', 'Your message has been sent. We\'ll be in touch.');
+                        form.reset();
+                    } else {
+                        showStatus('error', data.error || 'Something went wrong. Please try again.');
+                    }
+                } catch {
+                    showStatus('error', 'Could not send your message. Please try again or email us directly.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }
+            });
+
+            function showStatus(type, msg) {
+                status.className = 'contact-form-status ' + type;
+                status.textContent = msg;
+                status.style.display = 'block';
+            }
+        })();
+    </script>
 </body>
 </html>
