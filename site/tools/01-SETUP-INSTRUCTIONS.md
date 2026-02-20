@@ -6,8 +6,8 @@ These files shape how AI tools interpret and apply the Renergence frameworks.
 
 | File | What It Is |
 |------|-----------|
-| `renergence-ai-toolkit-reader.md` | Toolkit instructions for personal use |
-| `renergence-ai-toolkit-practitioner.md` | Toolkit instructions for professional use with clients |
+| `renergence-ai-toolkit-reader.md` | Toolkit file for personal use |
+| `renergence-ai-toolkit-practitioner.md` | Toolkit file for professional use with clients |
 | `renergence.md` | Book — the signal |
 | `heroes-not-required.md` | Book — Structure |
 | `why-you-thrive-here-and-not-there.md` | Book — Alignment |

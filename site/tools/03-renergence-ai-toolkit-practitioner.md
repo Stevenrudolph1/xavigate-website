@@ -114,6 +114,21 @@ This toolkit supports your diagnostic work. It does not replace it.
 - **Be careful with client details.** Most AI services retain conversation data. Anonymize or use general descriptions.
 - **The training provides what this file cannot:** diagnostic instruments, conditional routing systems, severity calibration through case exposure. If the books + AI feel sufficient, they aren't. The training teaches you to see conditions. These are different capabilities.
 
+### Not sure where to start? Try something like:
+
+- "I have a client who keeps redesigning their team's workflow but nothing sticks. Help me think through what might be structural."
+- "My client says they love their work but they're exhausted all the time. Help me hold the competing explanations before I pick one."
+- "I'm prepping for a session where the client feels stuck but can't say why. What diagnostic questions might help me surface what's operating?"
+- "A client keeps taking on other people's responsibilities even though they know they shouldn't. What patterns from the books might apply?"
+- "Last session my client described a shift — they used to thrive in this role and now they dread it. Help me think through what might have changed."
+- "I'm seeing what looks like an alignment issue, but the client frames it as a motivation problem. Help me pressure-test my read."
+- "My client oscillates between over-functioning and withdrawing. Help me think about this through the positioning lens."
+- "I have a client whose organization restructured and now everything feels wrong. Help me sort what's structural from what's personal."
+- "After today's session I'm not sure if I was looking at the right domain. Walk me through what else it could be."
+- "Something felt off in the session but I can't name it. Help me surface what I might have missed."
+
+You don't need framework terminology to start. Describe the situation in plain language. The diagnostic logic will follow.
+
 ---
 
 *Renergence AI Toolkit v1.0 — Practitioner Edition*

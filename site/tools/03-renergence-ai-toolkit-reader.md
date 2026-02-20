@@ -88,6 +88,21 @@ This file works best when you:
 
 5. **Iterate.** Start broad, let the AI identify a candidate pattern, then refine. "Is it more like X or Y?" is how structural diagnosis works.
 
+### Not sure where to start? Try something like:
+
+- "I keep solving the same problem at work and it keeps coming back. Help me figure out what might be structural about this."
+- "I'm good at what I do, but it drains me. Walk me through what might be misaligned."
+- "This role looks right on paper, but I dread going in. Help me understand why."
+- "I used to feel sharp and confident here. Lately I feel flat. What might have shifted?"
+- "Every time I step up to help, I end up carrying more than I meant to. What's happening there?"
+- "In meetings I either over-talk or disappear. Help me make sense of that pattern."
+- "My team keeps escalating things to me even though we have a process. What might be structural about that?"
+- "I'm busy all the time but nothing actually moves. Help me diagnose what's going on."
+- "Two parts of this situation both seem true and I don't know which to trust. Help me hold the tension instead of collapsing it."
+- "Something feels off, but I can't name it. Help me surface what I might not be seeing."
+
+You don't need the right terminology. Describe what's happening in plain language. The frameworks work from experience, not jargon.
+
 ---
 
 *Renergence AI Toolkit v1.0 — Reader Edition*
