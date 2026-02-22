@@ -1226,7 +1226,6 @@ body {
     text-transform: none;
     line-height: 1.35;
     margin-top: 8px;
-    max-width: 680px;
     opacity: 1;
 }
 .thread-renergence-detail .thread-section-label { background-color: var(--thread-renergence); }
