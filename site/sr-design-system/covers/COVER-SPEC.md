@@ -278,6 +278,15 @@ SVG files reference Google Fonts via `@import` in `<defs><style>`. Note: **cairo
 
 ---
 
+## Square Thumbnail & Publishing
+
+Thumbnail spec, Gumroad product setup, and content file requirements have moved to:
+**`books/PUBLISHING-SPEC.md`**
+
+Thumbnail renderer remains here: `render-thumbnail.js`
+
+---
+
 ## Common Mistakes (Do Not Repeat)
 
 | Mistake | Fix |
@@ -289,3 +298,4 @@ SVG files reference Google Fonts via `@import` in `<defs><style>`. Note: **cairo
 | Bookmark on wrong side | CSS has `right: 0`. SVG must use `x="167"` (175 - 8). |
 | Title font-size too small | Check the font-size table above. Don't use the CSS default (14.5px) for multi-line titles — it will overflow. |
 | Wrong subtitle text | Always check `canon-docs/EXPLORATION.md` for the locked subtitle. |
+| Thumbnail mistakes | See `books/PUBLISHING-SPEC.md` — thumbnail spec lives there now |
