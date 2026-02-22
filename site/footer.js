@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-col">
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="${pathPrefix}books/renergence.html">Renergence</a></li>
-                        <li><a href="${pathPrefix}books/structure.html">Structure</a></li>
-                        <li><a href="${pathPrefix}books/alignment.html">Alignment</a></li>
-                        <li><a href="${pathPrefix}books/positioning.html">Positioning</a></li>
+                        <li><a href="${pathPrefix}products.html#area-renergence">Renergence</a></li>
+                        <li><a href="${pathPrefix}products.html#area-structure">Structure</a></li>
+                        <li><a href="${pathPrefix}products.html#area-alignment">Alignment</a></li>
+                        <li><a href="${pathPrefix}products.html#area-positioning">Positioning</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
