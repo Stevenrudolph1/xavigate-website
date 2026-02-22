@@ -1404,7 +1404,6 @@ body {
 
 .depth-book {
     padding: var(--card-padding);
-    background-color: var(--surface-page);
     border-radius: var(--site-radius-sm);
     border-left: 3px solid var(--surface-card-border);
     display: flex;
