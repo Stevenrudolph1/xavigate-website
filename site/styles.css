@@ -1385,15 +1385,15 @@ body {
 }
 
 .depth-book-cover .cover {
-    transform: scale(1);
+    transform: scale(0.75);
     transform-origin: top left;
     width: var(--cover-width);
     height: var(--cover-height);
 }
 
 .depth-book-cover-wrap {
-    width: var(--cover-width);
-    height: var(--cover-height);
+    width: 131px;
+    height: 196px;
     overflow: hidden;
 }
 
@@ -1440,8 +1440,8 @@ body {
         flex-direction: column;
     }
     .depth-book-cover-wrap {
-        width: var(--cover-width);
-        height: var(--cover-height);
+        width: 131px;
+        height: 196px;
     }
 }
 
