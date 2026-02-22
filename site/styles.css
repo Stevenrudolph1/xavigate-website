@@ -913,8 +913,7 @@ body {
    ============================================ */
 .area-index {
     background-color: var(--surface-card);
-    padding: var(--space-site-md) 0;
-    border-bottom: var(--border-thin) solid var(--surface-card-border);
+    padding: 0 0 var(--space-site-md);
     text-align: center;
 }
 
@@ -935,15 +934,14 @@ body {
     text-decoration: none;
     font-weight: var(--weight-medium);
     font-size: var(--text-base);
-    color: var(--text-primary);
-    border-bottom: 3px solid transparent;
+    color: #1a1a1a;
     transition: all var(--transition-fast);
 }
 
 .area-index-desc {
     font-size: var(--text-sm);
     font-weight: var(--weight-normal);
-    color: var(--text-secondary);
+    color: #555;
     line-height: 1.3;
     max-width: 160px;
 }
@@ -951,11 +949,6 @@ body {
 .area-index-link:hover {
     color: var(--site-accent);
 }
-
-.area-index-link.index-renergence { border-bottom-color: var(--thread-renergence); }
-.area-index-link.index-hnr { border-bottom-color: var(--thread-hnr); }
-.area-index-link.index-mn { border-bottom-color: var(--thread-mn); }
-.area-index-link.index-engagement { border-bottom-color: var(--thread-engagement); }
 
 .area-index-mark {
     flex-shrink: 0;
@@ -965,8 +958,9 @@ body {
 
 /* Breathing room between area index and first product section */
 .area-index + .thread-detail,
-.area-index + .section-divider-mark {
-    margin-top: var(--space-site-xl);
+.area-index + .section-divider-mark,
+.page-header + .thread-detail {
+    margin-top: 0;
 }
 
 /* Area detail link (books page) */
@@ -1154,7 +1148,11 @@ body {
    Thread Detail Sections (Books page)
    ============================================ */
 .thread-detail {
-    padding: var(--space-site-xl) 0;
+    padding: 0;
+}
+.thread-detail > .container {
+    padding-top: var(--space-site-md);
+    padding-bottom: var(--space-site-xl);
 }
 
 .thread-hnr-detail {
@@ -1168,6 +1166,7 @@ body {
     overflow: hidden;
 }
 .thread-renergence-detail {
+    background-color: var(--surface-panel-renergence);
     position: relative;
     overflow: hidden;
 }
@@ -1179,7 +1178,7 @@ body {
 }
 
 .thread-header {
-    margin-bottom: var(--space-site-lg);
+    margin-bottom: var(--space-site-md);
     max-width: var(--content-wide);
 }
 
@@ -1200,6 +1199,40 @@ body {
 .thread-hnr-detail .thread-domain-label { background-color: var(--thread-hnr); }
 .thread-mn-detail .thread-domain-label { background-color: var(--thread-mn); }
 .thread-engagement-detail .thread-domain-label { background-color: var(--thread-engagement); }
+
+.thread-section-label {
+    display: block;
+    padding: 28px var(--space-site-md) 32px;
+    border-radius: 0;
+    margin: 0;
+    color: rgba(255,255,255,0.95);
+}
+.thread-section-label .label-name {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+.thread-section-label .label-question {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.35;
+    margin-top: 8px;
+    max-width: 680px;
+    opacity: 1;
+}
+.thread-renergence-detail .thread-section-label { background-color: var(--thread-renergence); }
+.thread-hnr-detail .thread-section-label { background-color: var(--thread-hnr); }
+.thread-mn-detail .thread-section-label { background-color: var(--thread-mn); }
+.thread-engagement-detail .thread-section-label { background-color: var(--thread-engagement); }
 
 .thread-header h2 {
     font-size: var(--text-2xl);
@@ -1494,6 +1527,30 @@ body {
 .page-header .container {
     position: relative;
     z-index: 2;
+}
+
+.page-header.page-header--light {
+    background: linear-gradient(180deg, #f8f9fb 0%, #eef0f4 100%);
+    padding-bottom: var(--space-site-md);
+}
+.page-header.page-header--light h1 {
+    color: var(--text-primary);
+}
+.page-header.page-header--light .page-intro,
+.page-header.page-header--light .page-intro button {
+    color: var(--text-secondary);
+}
+.page-header.page-header--light .area-index {
+    background: transparent;
+    padding-top: var(--space-site-md);
+    padding-bottom: 0;
+}
+.page-header.page-header--light a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+.page-header.page-header--light a:hover {
+    color: var(--site-accent);
 }
 
 /* Single centered mark (Renergence cycle) */
