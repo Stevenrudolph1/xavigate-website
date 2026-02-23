@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Get in touch with Renergence. Questions about books, training, or using the frameworks.">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="sr-design-system/sr-design-tokens.css">
-    <link rel="stylesheet" href="styles.css?v=20260216g">
+    <link rel="stylesheet" href="styles.css">
     <script src="header.js"></script>
     <style>
         .contact-form-wrap {
@@ -95,6 +95,20 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Renergence<sup style="font-size:0.45em;vertical-align:super;opacity:0.6;">&trade;</sup></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="structural-case-review.html">Case Review</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="use-professionally.html">Use Professionally</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Page Header -->
     <section class="page-header">
         <svg class="page-header__mark" viewBox="0 0 50 50" aria-hidden="true">
@@ -156,8 +170,6 @@
     </section>
 
     <script src="footer.js"></script>
-    <script src="navigator-config.js"></script>
-    <script src="navigator-widget.js"></script>
     <script>
         (function () {
             const form = document.getElementById('contactForm');

@@ -5075,6 +5075,105 @@ select:focus-visible,
     line-height: var(--line-relaxed);
 }
 
+.signal-bridge-list {
+    list-style: none;
+    text-align: center;
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    margin: var(--space-site-sm) auto;
+    padding: 0;
+}
+
+.signal-bridge-list li {
+    margin-bottom: 0.25em;
+}
+
+/* ============================================
+   Process Flow — How It Works
+   3-step horizontal with arrows, stacks on mobile
+   ============================================ */
+.process-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    max-width: 900px;
+    margin: var(--space-site-md) auto 0;
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    padding: 0 var(--space-site-sm);
+    max-width: 280px;
+}
+
+.process-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-site-xs);
+    color: var(--site-accent);
+    background: rgba(234, 34, 100, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.process-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.process-label {
+    font-family: var(--font-body);
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+    margin-bottom: 0.4em;
+    letter-spacing: var(--tracking-tight);
+}
+
+.process-desc {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+}
+
+.process-arrow {
+    flex-shrink: 0;
+    width: 32px;
+    height: 24px;
+    color: var(--text-muted);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.process-arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .process-flow {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-site-sm);
+    }
+
+    .process-step {
+        max-width: 400px;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+        margin-top: 0;
+    }
+}
+
 /* ============================================
    Phase 2A: Stat Block Component
    Large numbers with labels. Authority anchor.
